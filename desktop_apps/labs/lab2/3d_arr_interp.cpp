@@ -4,7 +4,7 @@
 #include<cmath>
 #include<iomanip>
 
-void print_2d_table(float** arr, short size_x, short size_y) {
+void print_2d_table(float** arr, int size_x, int size_y) {
     std::cout << std::endl << '[' << std::endl;
     for (int y = 0; y < size_y; y++) {
         std::cout << " |";
@@ -74,13 +74,13 @@ float** interpolate_2d_array(float** arr, short width, short height, short inter
 int main(void) {
     std::srand(std::time(0));
 
-    short width;
+    int width;
     std::cout << "Podaj szerokość tablicy: ", std::cin >> width;
 
-    short height;
-    std::cout << "Podaj wysokość tablicy: ", std::cin >> width;
+    int height;
+    std::cout << "Podaj wysokość tablicy: ", std::cin >> height;
 
-    float** array = new float*[width];
+    float** array = new float*[height];
     for (int i = 0; i < height; i++) array[i] = new float[width];
 
     std::cout << "Wygenerowana tablica to:" << std::endl;
@@ -94,7 +94,7 @@ int main(void) {
 
     float** interp_array = interpolate_2d_array(array, width, height, interp);
 
-    //print_2d_table(interp_array, interp * (size_x - 1) + 1, interp * (size_y - 1) + 1);
+    print_2d_table(interp_array, interp * (width - 1) + 1, interp * (width - 1) + 1);
 
     for (int i = 0; i < height; i++) delete [] array[i];
     delete [] array;
