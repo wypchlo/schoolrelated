@@ -94,7 +94,7 @@ int main(void) {
 
     float** interp_array = interpolate_2d_array(array, width, height, interp);
 
-    print_2d_table(interp_array, interp * (width - 1) + 1, interp * (width - 1) + 1);
+    print_2d_table(interp_array, interp * (width - 1) + 1, interp * (height - 1) + 1);
 
     for (int i = 0; i < height; i++) delete [] array[i];
     delete [] array;
