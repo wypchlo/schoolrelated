@@ -50,19 +50,19 @@ float** interpolate_2d_array(float** arr, short width, short height, short inter
     }
     
     // interpolates inbetweens horizontally
-    for (int i = 0; i < (height - 1); i++) {
-        for (int j = 0; j < (width - 1); j++) {
+    for (int i = 0; i < (height - 1) * interp; i += interp) {
+        for (int j = 0; j < (width - 1) * interp; j += interp) {
             for (int box_y = 1; box_y < interp; box_y++) {
-                int y = i * interp + box_y;
+                int y = i + box_y;
 
                 for (int box_x = 1; box_x < box_y; box_x++) {
-                    interp_array[y][j * interp + box_x] = 
-                        interp_array[y][j * interp] - (interp_array[y][j * interp] - interp_array[y][j * interp + box_y]) * (box_x / (float) box_y);
+                    interp_array[y][j + box_x] = 
+                        interp_array[y][j] - (interp_array[y][j] - interp_array[y][j + box_y]) * (box_x / (float) box_y);
                 }
 
                 for (int box_x = box_y + 1; box_x < interp; box_x++) {
-                    interp_array[y][j * interp + box_x] = 
-                        interp_array[y][j * interp + box_y] - (interp_array[y][j * interp + box_y] - interp_array[y][j * interp + interp]) * ((box_x - box_y) / (float) (interp - box_y));
+                    interp_array[y][j + box_x] = 
+                        interp_array[y][j + box_y] - (interp_array[y][j + box_y] - interp_array[y][j + interp]) * ((box_x - box_y) / (float) (interp - box_y));
                 }
             }
         }
@@ -94,7 +94,7 @@ int main(void) {
 
     float** interp_array = interpolate_2d_array(array, width, height, interp);
 
-    print_2d_table(interp_array, interp * (width - 1) + 1, interp * (height - 1) + 1);
+    //print_2d_table(interp_array, interp * (width - 1) + 1, interp * (height - 1) + 1);
 
     for (int i = 0; i < height; i++) delete [] array[i];
     delete [] array;
