@@ -44,8 +44,8 @@ int main(void) {
             float triangle1_field = calculate_field_from_edges(&a1, &b1, &c);
             float triangle2_field = calculate_field_from_edges(&a2, &b2, &c);
 
-            //std::cout << "Trójkąt 1: " << a1 << ", " << b1 << ", " << c << " Pole wynosi: " << triangle1_field << std::endl;
-            //std::cout << "Trójkąt 2: " << a2 << ", " << b2 << ", " << c << " Pole wynosi: " << triangle2_field << std::endl;
+            std::cout << "Trójkąt 1: " << a1 << ", " << b1 << ", " << c << " Pole wynosi: " << triangle1_field << std::endl;
+            std::cout << "Trójkąt 2: " << a2 << ", " << b2 << ", " << c << " Pole wynosi: " << triangle2_field << std::endl;
         }
     }
     
