@@ -1,5 +1,3 @@
-package com.zad4;
-
 import java.util.Scanner;
 import java.io.File;
 
