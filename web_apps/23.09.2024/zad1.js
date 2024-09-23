@@ -66,12 +66,18 @@ const server = http.createServer(async (req, res) => {
         default:
             const filename = pathname.substring(1, pathname.length);
             const filepath = __dirname + "/assets/" + filename;
+            
+            if (!fs.existsSync(filepath)) {
+                res.statusCode = 404;
+                res.setHeader("Content-Type", "application/json");
+                res.end(JSON.stringify({error: "404"}));
+                break;
+            }
 
+            res.statusCode = 200;
             let content2 = await fsPromises.readFile(filepath, { encoding: 'utf-8' });
             res.setHeader("Content-Type", mime.lookup(filename));
-            
-            if(fs.existsSync(filepath))
-            console.log(content2);
+            res.end(content2);
             break;
     }
 });
