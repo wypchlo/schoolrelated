@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
     public static boolean isPower(int value) {
@@ -24,17 +26,13 @@ public class Main {
             a = b;
             b = aCopy;
         }
-
-        System.out.println(a + " " + b);
         int reszta = b; 
         while(a % b != 0) {
             reszta = a % b;
             a = b;
             b = reszta; 
         }
-
-        System.out.println(reszta);
-        return 0;
+        return reszta;
     }
 
     public static void main(String[] args) {
@@ -70,10 +68,39 @@ public class Main {
             System.out.println("Zad 4.3");
             
             Scanner reader3 = new Scanner(liczby);
-
+            List<Integer> liczbyArr = new ArrayList<>();
+            List<Integer> ciag = new ArrayList<>();
+            List<Integer> najdluzszyCiag = new ArrayList<>();
+            Integer wspolnyDzielnik = null;
+            Integer endWspolnyDzielnik = null;
+            
+            while(reader3.hasNextInt()) liczbyArr.add(reader3.nextInt());
+            for(int i = 0; i < liczbyArr.size(); i++) {
+                ciag.add(liczbyArr.get(i));
+                for(int j = i + 1; j < liczbyArr.size(); j++){
+                    int number = liczbyArr.get(j);
+                    ciag.add(number);
+                    int prevNum = liczbyArr.get(j - 1);
+                    if(wspolnyDzielnik == null) {
+                        wspolnyDzielnik = NWD(prevNum, number);
+                        continue;
+                    }
+                    if(NWD(wspolnyDzielnik, number) == 1) {
+                        ciag.remove(ciag.size() - 1);
+                        int ciagSize = ciag.size();
+                        if (najdluzszyCiag.size() < ciagSize) najdluzszyCiag = ciag;
+                        endWspolnyDzielnik = wspolnyDzielnik;
+                        break;
+                    }
+                    wspolnyDzielnik = NWD(wspolnyDzielnik, number);
+                }
+                ciag = new ArrayList<>(); 
+                wspolnyDzielnik = null;
+            }
+            System.out.print("pierwsza liczba ciągu " + najdluzszyCiag.get(0));
+            System.out.print(", długość " + najdluzszyCiag.size());
+            System.out.println(", największy wspólny dzielnik " + endWspolnyDzielnik);
             reader3.close();
-
-            NWD(3, 10);
         }
         catch (FileNotFoundException e) {
             System.out.println("File not found");
