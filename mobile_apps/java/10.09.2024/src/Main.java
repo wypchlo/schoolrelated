@@ -69,13 +69,14 @@ public class Main {
             
             Scanner reader3 = new Scanner(liczby);
             List<Integer> liczbyArr = new ArrayList<>();
-            List<Integer> ciag = new ArrayList<>();
             List<Integer> najdluzszyCiag = new ArrayList<>();
-            Integer wspolnyDzielnik = null;
             Integer endWspolnyDzielnik = null;
             
             while(reader3.hasNextInt()) liczbyArr.add(reader3.nextInt());
             for(int i = 0; i < liczbyArr.size(); i++) {
+                List<Integer> ciag = new ArrayList<>();
+                Integer wspolnyDzielnik = null;
+
                 ciag.add(liczbyArr.get(i));
                 for(int j = i + 1; j < liczbyArr.size(); j++){
                     int number = liczbyArr.get(j);
@@ -88,14 +89,14 @@ public class Main {
                     if(NWD(wspolnyDzielnik, number) == 1) {
                         ciag.remove(ciag.size() - 1);
                         int ciagSize = ciag.size();
-                        if (najdluzszyCiag.size() < ciagSize) najdluzszyCiag = ciag;
-                        endWspolnyDzielnik = wspolnyDzielnik;
+                        if (najdluzszyCiag.size() < ciagSize) { 
+                            najdluzszyCiag = ciag;
+                            endWspolnyDzielnik = wspolnyDzielnik;
+                        }
                         break;
                     }
                     wspolnyDzielnik = NWD(wspolnyDzielnik, number);
                 }
-                ciag = new ArrayList<>(); 
-                wspolnyDzielnik = null;
             }
             System.out.print("pierwsza liczba ciągu " + najdluzszyCiag.get(0));
             System.out.print(", długość " + najdluzszyCiag.size());
