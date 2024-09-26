@@ -74,8 +74,17 @@ int main(void) {
             if(current_vector.y + move.y < 0 || current_vector.y + move.y >= height) move.y *= -1;
             //Sprawdza czy już wcześniej nie był w tym punkcie
             if(unavailable[current_vector.y + move.y][current_vector.x + move.x]) {
-                moves.erase(moves.begin() + move_index);
-                continue;
+                if(moves.size() > 1){
+                    moves.erase(moves.begin() + move_index);
+                    continue;
+                }
+                else {
+                    for(short y = 0; y < height; y++) {
+                        for(short x = 0; x < width; x++) {
+                            unavailable[y][x] = 0;
+                        }
+                    }
+                }
             }
                 
             vector2d proposed_vector = {current_vector.x + move.x, current_vector.y + move.y};
