@@ -44,8 +44,8 @@ void print_array_with_vectors(){
 int main(void) {  
     std::srand(time(0));
 
-    height = 30;
-    width = 30;
+    height = 4000;
+    width = 5000;
 
     terrain = new short*[height];
     for(short i = 0; i < height; i++) terrain[i] = new short[width];
@@ -84,6 +84,7 @@ int main(void) {
                             unavailable[y][x] = 0;
                         }
                     }
+                    break;
                 }
             }
                 
@@ -103,9 +104,9 @@ int main(void) {
             break;
         }
 
-        print_array_with_vectors();
-        std::cin.ignore();
-        system("clear");
+        //print_array_with_vectors();
+        //std::cin.ignore();
+        //system("clear");
     }
 
     for(short i = 0; i < height; i++) delete[] terrain[i];
