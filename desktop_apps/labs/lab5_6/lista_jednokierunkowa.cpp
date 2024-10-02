@@ -6,10 +6,10 @@ node* list_create_empty() {
 }
 
 
-node* list_create_from_array(data* array, int width) {
+node* list_create_from_array(data* array, int size) {
     node* first = new node{array[0], nullptr};
     node* previous = first;
-    for(int i = 1; i < width; i++) {
+    for(int i = 1; i < size; i++) {
         node* current = new node{array[i], nullptr};
         (*previous).next = current;
         previous = current;
@@ -19,7 +19,6 @@ node* list_create_from_array(data* array, int width) {
 
 
 void list_print(node* first_element) {
-    std::cout<<std::endl;
     node* current = first_element;
     while(current != nullptr) {
         //node current_value = *current;      ZAPYTAĆ O TO!!! (tzn czy oplaca sie to przypisac do zmiennej)
@@ -28,6 +27,31 @@ void list_print(node* first_element) {
         current = (*current).next;
     }
     std::cout<<std::endl;
+}
+
+
+node* list_remove(node* first_element, int index) {
+     if(!first_element) return nullptr;
+
+    node* current = first_element;
+    node* previous = nullptr; 
+    int current_index = 0;
+
+    do {
+        if(current_index == index) {
+            node* next = (*current).next;
+            delete current;
+            if(previous) (*previous).next = next;
+            else return next;
+            break;
+        }
+
+        current_index++;
+        previous = current;
+        current = (*current).next;
+    } while(current);
+
+    return first_element;   
 }
 
 
@@ -60,6 +84,25 @@ node* list_remove_first(node* first_element) {
     node* next = (*first_element).next;
     delete first_element;
     return next;
+}
+
+
+node* list_insert_after(node* first_element, data value, int index) {
+    if(!first_element) return nullptr;
+
+    node* current = first_element;
+    int current_index = 0;
+    
+    node* next;
+    while(current) {
+        next = (*current).next;
+        if(current_index == index) (*current).next = new node{value, next};
+
+        current = next;
+        current_index++;
+    }
+
+    return first_element;
 }
 
 
