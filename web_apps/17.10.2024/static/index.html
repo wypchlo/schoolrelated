@@ -1,0 +1,87 @@
+<!--
+    Aplikacja posiada 4 podstrony:
+    Strona główna - adres "/"
+    Strona "O nas" - adres "/o-nas"
+    Strona "Oferta" - adres "/oferta"
+    Strona "Kontakt" - adres "/kontakt"
+
+    Wymagania wspólne:
+    Stylowanie CSS dostępne jako plik statyczny - adres "/static/style.css"
+    Poprawna struktura HTML
+    Menu na górze strony
+    Stopka z imieniem i nazwiskiem oraz klasą
+    Wymagania dla poszczególnych podstron:
+
+    Strona główna:
+        Nagłówek pierwszego stopnia "Strona główna"
+        Dowolny tekst w kilku paragrafach (lorem ipsum lub AI Generated)
+    Strona "O nas":
+        Nagłówek pierwszego stopnia "O firmie"
+        Dowolny tekst w kilku paragrafach
+        Kilka zdjęć dostępnych w pod ścieżką "/static" (może być w formie slidera)
+    Strona "Oferta":
+        Nagłówek pierwszego stopnia "Oferta"
+        Dowolny tekst w kilku paragrafach
+        Tabela z dowolnymi usługami IT wraz z cennikiem
+    Strona "Kontakt"
+        Nagłówek pierwszego stopnia "Kontakt"
+        Formularz kontaktowy z następującymi polami:
+        Imię - tekst
+        Nazwisko - tekst
+        Email - email
+        Treść wiadomości - pole tekstowe
+        Dla ścieżki "kontakt" obsługa danych przesłanych metodą POST z formularza. Dane powinny być wyświetlone w konsoli, a następnie powinno nastąpić przekierowanie na stronę główną
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Main page </title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <a href="/" id="glowna"> <p> Strona główna </p> </a> 
+            <a href="/o-nas" id="o-nas"> <p> O nas </p> </a> 
+            <a href="/oferta" id="oferta"> <p> Oferta </p> </a> 
+            <a href="/kontakt" id="kontakt"> <p> Kontakt </p> </a> 
+        </nav>
+        <section>
+            <h1> 
+                <img src="StronaGlownaEpicSigma.gif"></img>
+            </h1>
+
+            <p>Dowolny</p>
+            <p> </p>
+            <p>tekst</p>
+            
+            <frog>
+                <img id="green-frog-and-sun-line-art-with-lorem-ipsum-text-design-2GJARKH" class="jpg" src="green-frog-and-sun-line-art-with-lorem-ipsum-text-design-2GJARKH.jpg">
+            </frog>
+        </section>
+        <footer>
+            Miłosz Wypchło klasa 4C
+        </footer>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<fire id="onfire">
+    <img src="animated-fire.gif"></img>
+</fire>

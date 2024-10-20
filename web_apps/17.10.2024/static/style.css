@@ -1,0 +1,71 @@
+section {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding-top: 100px;
+}
+section h1 {
+  width: 100%;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+}
+section #green-frog-and-sun-line-art-with-lorem-ipsum-text-design-2GJARKH.jpg {
+  z-index: -22;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+nav audio {
+  pointer-events: none;
+}
+nav a#o-nas {
+  line-height: 0.8rem;
+  text-decoration: none;
+}
+nav a#o-nas p::before {
+  font-size: 0.4rem;
+  font-family: monospace;
+  font-weight: bolder;
+  white-space: pre-wrap;
+  vertical-align: top;
+  letter-spacing: 0.15rem;
+  content: "\a             .-'''-.                                                \a            '   _    \\                                              \a          /   /` '.   \\              _..._                          \a         .   |     \\  '            .'     '.                        \a         |   '      |  '          .   .-.   .                       \a         \\    \\     / /           |  '   '  |    __                 \a          `.   ` ..' /            |  |   |  | .:--.'.         _     \a             '-...-'`             |  |   |  |/ |   \\ |      .' |    \a                                  |  |   |  |`\" __ | |     .   | /  \a                                  |  |   |  | .'.''| |   .'.'| |//  \a                                  |  |   |  |/ /   | |_.'.'.-'  /   \a                                  |  |   |  |\\ \\._,\\ '/.'   \\_.'    \a                                  '--'   '--' `--'  `\"              \a       ";
+}
+nav a#kontakt {
+  background-image: url("phonering.gif");
+  width: 100px;
+  height: 100px;
+}
+nav a#glowna {
+  background-image: url("Screenshot From 2024-10-18 12-09-25.png");
+  width: 223px;
+  height: 222px;
+}
+nav a#oferta {
+  font-size: 100px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+footer {
+  letter-spacing: 10px !important;
+}
+
+#onfire {
+  top: 200px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#onfire img {
+  width: 100%;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=style.css.map */

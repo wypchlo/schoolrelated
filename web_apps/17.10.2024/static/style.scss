@@ -1,0 +1,93 @@
+
+section {
+  h1 {
+    width: 100%;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  #green-frog-and-sun-line-art-with-lorem-ipsum-text-design-2GJARKH.jpg {
+    z-index: -22;
+  }
+  
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding-top: 100px;
+}
+
+nav {
+  audio {
+    pointer-events: none;
+  }
+  
+  a#o-nas {
+    p::before {
+      font-size: 0.4rem;
+      font-family: monospace;
+      font-weight: bolder;
+      white-space: pre-wrap;
+      vertical-align: top;
+      letter-spacing: 0.15rem;
+      content: "\A
+            .-'''-.                                                \A
+           '   _    \\                                              \A
+         /   /` '.   \\              _..._                          \A
+        .   |     \\  '            .'     '.                        \A
+        |   '      |  '          .   .-.   .                       \A
+        \\    \\     / /           |  '   '  |    __                 \A
+         `.   ` ..' /            |  |   |  | .:--.'.         _     \A
+            '-...-'`             |  |   |  |/ |   \\ |      .' |    \A
+                                 |  |   |  |`\" __ | |     .   | /  \A
+                                 |  |   |  | .'.''| |   .'.'| |//  \A
+                                 |  |   |  |/ /   | |_.'.'.-'  /   \A
+                                 |  |   |  |\\ \\._,\\ '/.'   \\_.'    \A
+                                 '--'   '--' `--'  `\"              \A
+      ";
+    }
+    line-height: 0.8rem;
+    text-decoration: none;
+  }
+  
+  a#kontakt {
+    background-image: url("phonering.gif");
+    width: 100px;
+    height: 100px;
+  }
+  
+  a#glowna {
+    background-image: url("Screenshot From 2024-10-18 12-09-25.png");
+    width: 223px;
+    height: 222px;
+  }
+
+  a#oferta {
+    font-size: 100px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+footer {
+  letter-spacing: 10px !important;
+}
+
+#onfire {
+    img {
+      width: 100%;
+      z-index: 10;
+    }
+    
+    top: 200px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+

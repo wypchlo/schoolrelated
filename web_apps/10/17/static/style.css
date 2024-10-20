@@ -1,0 +1,156 @@
+@charset "UTF-8";
+nav {
+  width: 100%;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  order: 1 !important;
+}
+nav button {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+}
+nav a {
+  margin: 5px;
+  outline: 2px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  cursor: pointer;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+}
+nav a[href="/kontakt"], nav a[href="/oferta"] {
+  position: relative;
+}
+nav a[href="/kontakt"]::before, nav a[href="/oferta"]::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("assets/contact_us.png");
+  background-size: 100%;
+  z-index: -1 !important;
+}
+nav a[href="/kontakt"]::before {
+  background-image: url("assets/contact_us.png");
+}
+nav a[href="/oferta"]::before {
+  background-image: url("assets/dollarspindownd.png");
+  background-position-y: 10px;
+  background-size: 50%;
+}
+nav a[href="/kontakt"]:hover::before {
+  background-image: url("assets/contact_us.gif");
+}
+nav a[href="/oferta"]:hover::before {
+  background-image: url("assets/dollarspindownd.gif");
+}
+nav a[href="/"] {
+  background-image: url("assets/blue_computer_icon.png");
+  background-size: 100%;
+}
+nav a[href="/o-nas"] {
+  position: relative;
+  line-height: 0.8rem;
+}
+nav a[href="/o-nas"] p::before {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  font-size: 0.7rem;
+  font-family: monospace;
+  font-weight: 900;
+  white-space: pre;
+  vertical-align: top;
+  letter-spacing: 0.1rem;
+  content: " __            __ \a/  \\  |\\ | /\\ (_  \a\\__/  | \\|/--\\__) ";
+}
+nav a[href="/"] {
+  overflow: hidden;
+  position: relative;
+  line-height: 0.5rem;
+}
+nav a[href="/"] p::before {
+  top: -10px;
+  left: 3px;
+  position: absolute;
+  font-size: 0.5rem;
+  font-family: monospace;
+  font-weight: 100;
+  white-space: pre;
+  opacity: 50%;
+  vertical-align: top;
+  letter-spacing: 0rem;
+  content: "\a⠀⢀⣀⣀⠠⠖⠉⠉⠙⠦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\a⠰⣏⠉⠁⠀⠀⠀⣴⣾⣖⢂⠀⢉⡉⠛⠒⠶⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\a⠀⠈⠓⣦⢤⣀⠀⠸⡍⢉⡜⠀⠀⠀⠉⠁⠂⠀⠀⠀⠉⠐⠠⢄⠀⠀⠀⠀⠀⠀\a⠀⠀⠀⠈⢦⡀⠈⠑⠒⠦⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣦⠀⠀⠀\a⡤⣄⡀⠀⡀⡹⠲⢤⣀⣈⢯⡉⠒⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠳⣄⠀\a⢀⣤⣼⠿⠀⡄⡐⠀⠈⠙⢌⢉⠟⠓⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠤⠀⠀⢩⠧\a⠈⠉⠀⠀⠀⢑⡞⡀⠀⠀⢈⡏⠀⠀⡌⠀⠀⠀⠀⠀⠀⣀⣴⠟⠀⣀⡤⠞⠫⢱\a⠀⠀⠀⣤⠆⣤⣐⠓⠀⠀⠸⢇⣀⠞⠢⠄⣠⠀⠤⠖⠋⠹⠁⠀⠈⠁⠀⠀⣀⠞\a⠀⠀⠀⠈⠉⢤⡚⠔⠊⠉⠉⠀⠁⠀⠀⠀⢠⢤⣀⡲⠀⠛⠂⠤⣤⠤⣲⠟⠁⠀\a⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠦⠭⠉⢡⣶⣂⣀⠠⠤⠶⠊⠁⠀⠀⠀\a         ";
+}
+nav a p {
+  margin-top: 5px;
+}
+
+h1 img[src="assets/serwiscrop.gif"] {
+  width: 60%;
+}
+
+footer {
+  order: 3 !important;
+  padding-top: 20px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section:has(img[src="assets/games.webp"]) {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 0;
+  font-size: 20px;
+  display: flex;
+}
+section:has(img[src="assets/games.webp"]) img[src="assets/games.webp"] {
+  height: 170px;
+  aspect-ratio: initial;
+}
+section:has(img[src="assets/games.webp"]) div {
+  padding-left: 10px;
+}
+
+section:has(img[src="assets/training.jpg"]) {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 0;
+  font-size: 20px;
+  display: flex;
+}
+section:has(img[src="assets/training.jpg"]) img[src="assets/training.jpg"] {
+  height: 170px;
+  aspect-ratio: initial;
+}
+section:has(img[src="assets/training.jpg"]) div {
+  padding-right: 10px;
+}
+
+section:has(table) {
+  padding: 30px 0;
+}
+section:has(table) table, section:has(table) td, section:has(table) tr, section:has(table) th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+body > * {
+  order: 2;
+}
+
+/*# sourceMappingURL=style.css.map */
