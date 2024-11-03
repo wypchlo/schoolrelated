@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+Mjeavn5l8GaNft87ZV5+1a+Zi+umXy3QCK8Jw0WVLFem/YCK346wdU3ZjtKBNeZHkwKOg3IuukrjkLnjCopfg==",
+  "success": true,
+  "projectFilePath": "/home/deron/Documents/school/app_testing/nvim_tests/Calculator/Calculator.csproj",
+  "expectedPackageFiles": [
+    "/home/deron/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

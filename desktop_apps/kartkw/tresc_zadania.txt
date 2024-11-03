@@ -1,0 +1,10 @@
+1. utworz strukture (drukarka) z danymi 
+- marka drukarki 
+- typ (drukarki np laserowa)
+- rok produkcji,
+
+zbuduj kilka elementów tej struktury w postaci kolejki dynamicznej, a nastepnie napisz funkcje 
+wyszukujaca wszystkie elementy z ustalonego przez parameter roku produkcji
+
+2. utworz tablice 3d (dynamicznie czyli przez wskazniki) przechowujaca probki temperatur w pomieszczeniu pobrane na 
+regularnej siatce 

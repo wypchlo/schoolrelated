@@ -1,0 +1,173 @@
+nav {
+  button {
+    width: 150px;
+    height: 50px;
+    padding: 0;
+  }
+
+  a {
+    &[href="/kontakt"], &[href="/oferta"]{
+      &::before {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url("assets/contact_us.png");
+        background-size: 100%;
+        z-index: -1 !important;
+      }
+      
+      position: relative;
+    }
+    
+    &[href="/kontakt"]::before { background-image: url("assets/contact_us.png") }
+    &[href="/oferta"]::before { 
+      background-image: url("assets/dollarspindownd.png");
+      background-position-y: 10px;
+      background-size: 50%;
+    }
+
+    &[href="/kontakt"]:hover::before{ background-image: url("assets/contact_us.gif") }
+    &[href="/oferta"]:hover::before{ background-image: url("assets/dollarspindownd.gif") }
+
+    &[href="/"] {
+      background-image: url("assets/blue_computer_icon.png");
+      background-size: 100%;
+    }
+
+    &[href="/o-nas"] {
+      & p::before {
+        top: 5px;
+        left: 5px;
+        position: absolute;
+        font-size: 0.7rem;
+        font-family: monospace;
+        font-weight: 900;
+        white-space: pre;
+        vertical-align: top;
+        letter-spacing: 0.10rem;
+        content: ' __            __ \A/  \\  |\\ | /\\ (_  \A\\__/  | \\|/--\\__) ';
+      }
+      
+      position: relative;
+      line-height: 0.8rem;
+
+    }
+   
+    &[href="/"] {
+      & p::before {
+        top: -10px;
+        left: 3px;
+        position: absolute;
+        font-size: 0.5rem;
+        font-family: monospace;
+        font-weight: 100;
+        white-space: pre;
+        opacity: 50%;
+        vertical-align: top;
+        letter-spacing: 0.00rem;
+        content: '\A
+⠀⢀⣀⣀⠠⠖⠉⠉⠙⠦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\A
+⠰⣏⠉⠁⠀⠀⠀⣴⣾⣖⢂⠀⢉⡉⠛⠒⠶⠤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\A
+⠀⠈⠓⣦⢤⣀⠀⠸⡍⢉⡜⠀⠀⠀⠉⠁⠂⠀⠀⠀⠉⠐⠠⢄⠀⠀⠀⠀⠀⠀\A
+⠀⠀⠀⠈⢦⡀⠈⠑⠒⠦⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣦⠀⠀⠀\A
+⡤⣄⡀⠀⡀⡹⠲⢤⣀⣈⢯⡉⠒⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠳⣄⠀\A
+⢀⣤⣼⠿⠀⡄⡐⠀⠈⠙⢌⢉⠟⠓⢈⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠤⠀⠀⢩⠧\A
+⠈⠉⠀⠀⠀⢑⡞⡀⠀⠀⢈⡏⠀⠀⡌⠀⠀⠀⠀⠀⠀⣀⣴⠟⠀⣀⡤⠞⠫⢱\A
+⠀⠀⠀⣤⠆⣤⣐⠓⠀⠀⠸⢇⣀⠞⠢⠄⣠⠀⠤⠖⠋⠹⠁⠀⠈⠁⠀⠀⣀⠞\A
+⠀⠀⠀⠈⠉⢤⡚⠔⠊⠉⠉⠀⠁⠀⠀⠀⢠⢤⣀⡲⠀⠛⠂⠤⣤⠤⣲⠟⠁⠀\A
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠦⠭⠉⢡⣶⣂⣀⠠⠤⠶⠊⠁⠀⠀⠀\A
+        ';
+      }
+      
+      overflow: hidden;
+      position: relative;
+      line-height: 0.5rem;
+    }
+
+    p { margin-top: 5px }
+     
+    margin: 5px;
+    outline: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    cursor: pointer;
+    text-align: center;
+
+    width: 150px;
+    height: 50px;
+  }
+  
+  width: 100%;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  order: 1 !important;
+}
+
+h1 {
+  img[src="assets/serwiscrop.gif"] {
+    width: 60%;
+  }
+}
+
+footer { 
+  order: 3 !important;
+  padding-top: 20px;
+}
+
+html { height: 100% }
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section:has(img[src="assets/games.webp"]) { 
+  & img[src="assets/games.webp"] { 
+    height: 170px;
+    aspect-ratio: initial;
+  }
+  
+  & div {
+    padding-left: 10px;
+  }
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 0;
+  font-size: 20px;
+  display: flex;
+}
+
+section:has(img[src="assets/training.jpg"]) { 
+  & img[src="assets/training.jpg"] { 
+    height: 170px;
+    aspect-ratio: initial;
+  }
+  
+  & div {
+    padding-right: 10px;
+  }
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 0;
+  font-size: 20px;
+  display: flex;
+}
+
+section:has(table) {
+  table, td, tr, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+
+  padding: 30px 0;
+}
+
+body > * { order: 2 }
