@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Przygotuj prostą aplikację w LinearLeayout (vertical).
+Aplikacja powinna zawierać formularz z minimum 3 polami edycyjnymi, radio buttonami oraz checkboxem, a także minimum 2 przyciski.
+Przetestuj aplikację na różnych tematach (themes). Wbudowane tematy znajdziesz w pliku:
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/themes.xml
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Aktualizujemy polityke prywatności" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="Chcemy więcej twoich danych daj nam ich więcej."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Podaj adres zamieszkania"/>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:ems="10"
+        android:inputType="text"
+        android:gravity="center"
+        android:text="Poznań ul. fredry 13" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Podaj numer karty kredytowej"/>
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:ems="10"
+        android:inputType="number"
+        android:gravity="center"
+        android:text="8232 1283 2398 8982" />
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Podaj numerki z tyłu"/>
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:ems="10"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="887" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Czy chcesz kupić subskrypcje na zgrąszcz? (40zł miesięcznie)" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tak" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tak" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Co uważasz o zmianach?" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="Nie teraz (za 5 min.)" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="OK" />
+    </LinearLayout>
+
+</LinearLayout>

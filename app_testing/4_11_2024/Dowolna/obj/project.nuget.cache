@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xiNnn2+5+vpjbaon5odc58gBBTV+StfskB2ymVih9ZFLJDIYr1E3A2Uc0pEj5ztpovkW7TXWIz4DRIDwHiScrQ==",
+  "success": true,
+  "projectFilePath": "/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/Dowolna.csproj",
+  "expectedPackageFiles": [
+    "/home/deron/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

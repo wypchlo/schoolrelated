@@ -1,0 +1,12 @@
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/bin/Debug/net8.0/Dowolna.deps.json
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/bin/Debug/net8.0/Dowolna.dll
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/bin/Debug/net8.0/Dowolna.pdb
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.GeneratedMSBuildEditorConfig.editorconfig
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.AssemblyInfoInputs.cache
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.AssemblyInfo.cs
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.csproj.CoreCompileInputs.cache
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.sourcelink.json
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.dll
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/refint/Dowolna.dll
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/Dowolna.pdb
+/home/deron/Documents/school/app_testing/4_11_2024/Dowolna/obj/Debug/net8.0/ref/Dowolna.dll

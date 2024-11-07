@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name" >23</string>
+
+    <string name="form_register_header">Zarejestruj się</string>
+    <string name="form_login_header">Zaloguj się</string>
+
+    <string name="login_header">Podaj login</string>
+    <string name="login_placeholder">JohnDoe</string>
+
+    <string name="password_header">Podaj hasło</string>
+    <string name="password_placeholder">LjsJ#44@#2@#1hsj2</string>
+
+    <string name="password_repeat_header">Powtórz hasło</string>
+    <string name="password_repeat_placeholder">LjsJ#44@#2@#1hsj2</string>
+
+    <string name="email_header">Podaj e-mail</string>
+    <string name="email_placeholder">john.doe@email.com</string>
+
+    <string name="button_text">Potwierdź</string>
+</resources>

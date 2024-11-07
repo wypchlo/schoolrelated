@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name"> 30 </string>
+
+    <string name="header"> Przykłady zastosowań stylów </string>
+
+    <string name="reddify"> Jestem słabo zaczerwieniony </string>
+    <string name="ultra_reddify"> Jestem intensywnie zaczerwieniony </string>
+
+    <string name="bluify"> Jestem lekko zniebieszczony </string>
+    <string name="mega_bluify"> Jestem potężnie zniebieskowany </string>
+</resources>

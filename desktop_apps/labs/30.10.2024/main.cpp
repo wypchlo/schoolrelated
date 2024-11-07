@@ -13,3 +13,17 @@ int main(void) {
     std::cout<<"Punkt2 x: "<<punkt2.GetX()<<std::endl<<"y: "<<punkt2.GetY()<<std::endl;
     std::cout<<"Punkt3 x: "<<punkt3.GetX()<<std::endl<<"y: "<<punkt3.GetY()<<std::endl;
 }
+
+redefinicja operatora przypisania 
+redefinicja operatora strumieniowania
+długość vecotra policzyć w klasie punkt
+to też w klasie punkt wszystko pod tym
+dodać dodawanie vektorów i odejmowanie vektorów
+i razy (*) czyli iloczyn skalarny
+
+
+zrobic klase polygon
+funkcja na pole wielokątka w przypadkach
+trójkąta bez boków, pola tylko na punkty
+redefinicja w polygonie []
+iloczyn skalarny 
