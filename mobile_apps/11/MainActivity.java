@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,13 +30,6 @@ public class MainActivity extends AppCompatActivity {
         TextView output = findViewById(R.id.age);
         String input_text = input.getText().toString();
 
-        output.setText("MASZ " + input_text + " LAT");
-    }
-
-    public void makeAToast(final View view) {
-        EditText input = findViewById(R.id.toastInput);
-        String input_text = input.getText().toString();
-        Toast toast = Toast.makeText(this, input_text, Toast.LENGTH_LONG);
-        toast.show();
+        output.setText(input_text);
     }
 }

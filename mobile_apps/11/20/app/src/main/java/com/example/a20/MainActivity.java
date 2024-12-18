@@ -1,10 +1,6 @@
-package com.example.a13;
+package com.example.a20;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,20 +20,5 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    public void setLabelText(final View view) {
-        EditText input = findViewById(R.id.ageInput);
-        TextView output = findViewById(R.id.age);
-        String input_text = input.getText().toString();
-
-        output.setText("MASZ " + input_text + " LAT");
-    }
-
-    public void makeAToast(final View view) {
-        EditText input = findViewById(R.id.toastInput);
-        String input_text = input.getText().toString();
-        Toast toast = Toast.makeText(this, input_text, Toast.LENGTH_LONG);
-        toast.show();
     }
 }
