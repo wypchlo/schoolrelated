@@ -1,5 +1,7 @@
 package com.example.a20;
 
+import java.util.regex.*;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    protected void switchActivity(String email) {
+        Intent i = new Intent(this, NewActivity.class);
+        i.putExtra("email", email);
+        startActivity(i);
+    }
+
     protected String validateInputs() {
         EditText emailInput = findViewById(R.id.email_input);
         String email = emailInput.getText().toString();
@@ -42,8 +50,16 @@ public class MainActivity extends AppCompatActivity {
         String passwordRepeat = passwordRepeatInput.getText().toString();
 
         if(password.isEmpty()) return getString(R.string.password_missing);
+
+        if(!Pattern.compile("^.{8,}$").matcher(password).matches()) return getString(R.string.minimum_8_digits);
+        if(!Pattern.compile("^.*\\d.*$").matcher(password).matches()) return getString(R.string.at_least_one_number);
+        if(!Pattern.compile("^.*[A-ZĄĆĘŁŃÓŚŻŹ].*$").matcher(password).matches()) return getString(R.string.at_least_one_capital_letter);
+        if(!Pattern.compile("^.*[a-ząćęłńóśżź].*$").matcher(password).matches()) return getString(R.string.at_least_one_letter);
+
         if(passwordRepeat.isEmpty()) return getString(R.string.password_repeat_missing);
         if(!password.equals(passwordRepeat)) return getString(R.string.passwords_not_equal);
+
+        switchActivity(email);
 
         return getString(R.string.welcome) + ' ' + email;
     }

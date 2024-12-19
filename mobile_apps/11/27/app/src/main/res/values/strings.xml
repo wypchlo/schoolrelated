@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">27</string>
+    <string name="header">Rejestruj konto</string>
+    <string name="email_label">Podaj e-mail:</string>
+    <string name="email_input">email</string>
+    <string name="password_label">Podaj hasło:</string>
+    <string name="password_repeat_label">Powtórz hasło:</string>
+    <string name="button">ZATWIERDŹ</string>
+
+    <string name="default_message">Autor Miłosz Wypchło</string>
+    <string name="email_error">Nieprawidłowy adres e-mail</string>
+    <string name="passwords_not_equal">Hasła nie są równe</string>
+    <string name="password_missing">Należy podać hasło</string>
+    <string name="password_repeat_missing">Należy powtórzyć hasło</string>
+    <string name="welcome">Witaj</string>
+
+    <string name="minimum_8_digits">Hasło musi zawierać przynajmniej 8 znaków</string>
+    <string name="at_least_one_number">Hasło musi zawierać przynajmniej jedną cyfrę</string>
+    <string name="at_least_one_capital_letter">Hasło musi zawierać przynajmniej jedną wielką literę</string>
+    <string name="at_least_one_letter">Hasło musi zawierać przynajmniej jedną małą literę</string>
+
+    <string name="welcome_to_the_app">Witamy w aplikacji</string>
+    <string name="log_out">Wyloguj</string>
+    <string name="logged_as">Zalogowano jako</string>
+</resources>
