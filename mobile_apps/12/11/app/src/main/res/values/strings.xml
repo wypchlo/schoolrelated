@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">11</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="form_header">Formularz rejestracji</string>
+    <string name="email_hint">Email</string>
+    <string name="name_hint">Imię</string>
+    <string name="surname_hint">Nazwisko</string>
+    <string name="confirm">Zatwierdź</string>
+
+    <string name="email_missing">Email jest wymagany</string>
+    <string name="name_missing">Imię jest wymagane</string>
+    <string name="surname_missing">Nazwisko jest wymagane</string>
+    <string name="invalid_email">Adres email jest nieprawidłowy</string>
+
+
+    <string name="results_header">Wyniki formularza</string>
+</resources>
