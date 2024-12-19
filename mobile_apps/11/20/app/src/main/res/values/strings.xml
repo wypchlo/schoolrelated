@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">20</string>
+    <string name="header">Rejestruj konto</string>
+    <string name="email_label">Podaj e-mail:</string>
+    <string name="email_input">email</string>
+    <string name="password_label">Podaj hasło:</string>
+    <string name="password_repeat_label">Powtórz hasło:</string>
+    <string name="button">ZATWIERDŹ</string>
+
+    <string name="default_message">Autor Miłosz Wypchło</string>
+    <string name="email_error">Nieprawidłowy adres e-mail</string>
+    <string name="passwords_not_equal">Hasła nie są równe</string>
+    <string name="password_missing">Należy podać hasło</string>
+    <string name="password_repeat_missing">Należy powtórzyć hasło</string>
+    <string name="welcome">Witaj</string>
 </resources>
