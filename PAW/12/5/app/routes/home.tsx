@@ -1,13 +1,20 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { NavLink } from "react-router";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Homer" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+        <h1 className="font"> Home AI </h1>
+
+        <nav>
+            <NavLink to="/about"> About </NavLink>
+            <NavLink to="/contact"> Contact </NavLink>
+        </nav>
+    </>
+  );
 }
