@@ -1,5 +1,6 @@
 import logoImage from "/logobest.png";
 import React, { useRef, useEffect } from "react";
+import { NavLink } from "react-router";
 import BlockButton from "app/components/BlockButton";
 
 export function meta() {
@@ -11,9 +12,7 @@ export function meta() {
 
 export default function Home() {
     function removeCharacterAtIndex(str: String, index: number) {
-        if (index < 0 || index >= str.length) {
-            return str;
-        }
+        if (index < 0 || index >= str.length) return str;
         return str.slice(0, index) + str.slice(index + 1);
     }
 
@@ -50,7 +49,7 @@ export default function Home() {
 
     return (
         <main id="home">
-            <div id="routeIndicator"> Strona glówna </div>
+            <div id="routeIndicator"> Forum beta 1.7.3 </div>
 
             <header>
                 <div><img src={logoImage} id="logoImage"/></div>
@@ -58,11 +57,11 @@ export default function Home() {
             
             <nav>
                 <div id="container">
-                    <BlockButton> Wpisy </BlockButton>
-                    <button> Kategorie </button>
+                    <NavLink to="/posts"><BlockButton> Wpisy </BlockButton></NavLink>
+                    <BlockButton> Kategorie </BlockButton>
                     <div id="bonus">
-                        <button onClick={scramble}> Scramble </button>
-                        <button onClick={toggleMusic}> Music </button>
+                        <BlockButton onClick={scramble}> Zepsuj </BlockButton>
+                        <BlockButton onClick={toggleMusic}> Muzyka </BlockButton>
                     </div>
                 </div>
             </nav>

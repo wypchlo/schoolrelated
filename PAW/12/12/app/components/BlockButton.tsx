@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function BlockButton({onClick, children}: any) {
     const playClickSound = () => {
-        let clickAudio = new Audio("/click.mp3");
+        let clickAudio = new Audio("/click.ogg");
         clickAudio.play();
     }
 
