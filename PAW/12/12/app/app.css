@@ -16,7 +16,7 @@ body {
   background-image: url("/background.jpg");
   background-size: 100px;
   image-rendering: pixelated;
-  font-size: clamp(8px, 2.4vw, 34px);
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
   font-family: "Minecraft";
 }
 
@@ -24,8 +24,8 @@ body {
   width: 100%;
   height: clamp(15.3846153846px, 4.6153846154vw, 65.3846153846px);
   font-family: "Minecraft";
-  font-size: clamp(8px, 2.4vw, 34px);
-  text-shadow: clamp(0.8px, 0.24vw, 3.4px) clamp(0.8px, 0.24vw, 3.4px) #383838;
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #383838;
   box-shadow: 0 0 0 clamp(1px, 0.3vw, 4.25px) rgb(0, 0, 0);
   border-bottom: clamp(2px, 0.6vw, 8.5px) solid rgba(0, 0, 0, 0.25);
   border-right: clamp(1px, 0.3vw, 4.25px) solid rgba(0, 0, 0, 0.25);
@@ -39,7 +39,7 @@ body {
 
 .blockButton:hover {
   color: #ffffa0;
-  text-shadow: clamp(0.8px, 0.24vw, 3.4px) clamp(0.8px, 0.24vw, 3.4px) #3f3f28;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f28;
   background-image: url("/buttonbackgroundlid.png") !important;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 #home #routeIndicator {
   margin-left: clamp(1.6px, 0.48vw, 6.8px);
-  text-shadow: clamp(0.8px, 0.24vw, 3.4px) clamp(0.8px, 0.24vw, 3.4px) rgba(0, 0, 0, 0.25);
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) rgba(0, 0, 0, 0.25);
   color: #505050;
 }
 #home header {
@@ -111,7 +111,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  text-shadow: clamp(0.8px, 0.24vw, 3.4px) clamp(0.8px, 0.24vw, 3.4px) #3f3f3f;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
 }
 
 #posts {
@@ -125,10 +125,20 @@ body {
   margin-top: clamp(13.3333333333px, 4vw, 56.6666666667px);
   margin-bottom: clamp(2.6666666667px, 0.8vw, 11.3333333333px);
   text-align: center;
-  text-shadow: clamp(0.8px, 0.24vw, 3.4px) clamp(0.8px, 0.24vw, 3.4px) #3f3f3f;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+#posts section::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0px 20px 10px -10px black, inset 0px -20px 10px -10px black;
 }
 #posts section {
-  box-shadow: inset 0px 20px 10px -10px black, inset 0px -20px 10px -10px black;
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -147,34 +157,56 @@ body {
 #posts section #postContainer ::-webkit-scrollbar {
   display: none;
 }
-#posts section #postContainer .post {
+#posts section #postContainer #padding {
+  padding: clamp(2.8571428571px, 0.8571428571vw, 12.1428571429px);
+}
+#posts section #postContainer #padding .post {
   background: none;
-  border: 2px solid white;
+  box-sizing: border-box;
+  border: none;
+  width: 90%;
+  margin: 0 auto;
   color: white;
   display: flex;
   flex-direction: column;
   justify-items: start;
   text-align: left;
   font-family: "Minecraft";
-  height: clamp(40px, 12vw, 170px);
-  font-size: clamp(8px, 2.4vw, 34px);
-  padding: clamp(2px, 0.6vw, 8.5px);
+  height: clamp(33.3333333333px, 10vw, 141.6666666667px);
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  padding: clamp(1px, 0.3vw, 4.25px);
+  display: flex;
+  flex-direction: column;
 }
-#posts section aside {
-  height: 100%;
-  width: clamp(5.7142857143px, 1.7142857143vw, 24.2857142857px);
+#posts section #postContainer #padding .post #title, #posts section #postContainer #padding .post #description {
+  margin: 0 clamp(2.6666666667px, 0.8vw, 11.3333333333px);
+}
+#posts section #postContainer #padding .post #title {
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+#posts section #postContainer #padding .post #description {
+  color: #808080;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #202020;
+}
+#posts section #postContainer #padding .post:focus {
+  padding: 0;
+  border: clamp(1px, 0.3vw, 4.25px) solid #808080;
   background-color: black;
-  position: relative;
 }
-#posts section aside #scrollbar {
-  position: absolute;
-  top: 0;
-  height: 80%;
-  width: 100%;
-  background-color: #c0c0c0;
+#posts section #scrollbar .ScrollbarsCustom-TrackY {
+  background-color: black !important;
+  border-radius: 0 !important;
+  width: clamp(5px, 1.5vw, 21.25px) !important;
+  height: 100% !important;
+  top: 0 !important;
+  z-index: 2;
+}
+#posts section #scrollbar .ScrollbarsCustom-ThumbY {
+  background-color: #c0c0c0 !important;
+  border-radius: 0 !important;
   box-sizing: border-box;
-  border-right: clamp(0.9523809524px, 0.2857142857vw, 4.0476190476px) solid #808080;
-  border-bottom: clamp(0.9523809524px, 0.2857142857vw, 4.0476190476px) solid #808080;
+  border-right: clamp(1px, 0.3vw, 4.25px) solid #808080 !important;
+  border-bottom: clamp(0.7142857143px, 0.2142857143vw, 3.0357142857px) solid #808080 !important;
 }
 #posts footer {
   padding: clamp(8px, 2.4vw, 34px);
