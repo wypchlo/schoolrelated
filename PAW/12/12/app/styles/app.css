@@ -193,7 +193,7 @@
   color: #808080;
   text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #202020;
 }
-#posts section #postContainer #padding .post:focus {
+#posts section #postContainer #padding .post.selected {
   padding: 0;
   border: clamp(1px, 0.3vw, 4.25px) solid #808080;
   background-color: black;
@@ -242,15 +242,23 @@
   border-left: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
   border-top: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
   background-image: url("/buttonbackground.png");
-  background-size: clamp(50px, 15vw, 212.5px);
+  background-size: clamp(153.8461538462px, 46.1538461538vw, 653.8461538462px);
+  background-repeat: repeat;
   border-radius: 0;
   color: #e0e0e0;
+}
+
+.blockButton:disabled {
+  border: none !important;
+  text-shadow: none;
+  color: #a0a0a0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/buttonbackground.png") !important;
 }
 
 .blockButton:hover {
   color: #ffffa0;
   text-shadow: 0.1em 0.1em #3f3f28;
-  background-image: url("/buttonbackgroundlid.png") !important;
+  background-image: linear-gradient(rgba(135, 155, 255, 0.305), rgba(134, 155, 255, 0.305)), url("/buttonbackground.png") !important;
 }
 
 :root {

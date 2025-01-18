@@ -81,7 +81,7 @@
                     }
                 }
 
-                .post:focus {
+                .post.selected {
                     padding: 0;
                     border: scaleclamp(40) solid #808080;
                     background-color: black;

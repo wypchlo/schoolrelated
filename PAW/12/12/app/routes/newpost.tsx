@@ -5,12 +5,16 @@ import { NavLink } from "react-router"
 export default function NewPost() {
     const formRef = useRef<HTMLFormElement>(null);
 
-    async function addPost(formData: any) {
+    async function addPost(formData: FormData) {
+        const title = formData.get("title");
+        const description = formData.get("description");
+        const content = formData.get("content");
+        
         try {
             const response = await fetch('http://localhost:3000/wpis', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData) 
+                body: JSON.stringify({ title, description, content }) 
             });
         }
         catch(error) {

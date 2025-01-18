@@ -10,13 +10,25 @@
     border-left: scaleclamp(40) solid rgba(255, 255, 255, 0.5);
     border-top: scaleclamp(40) solid rgba(255, 255, 255, 0.5);
     background-image: url("/buttonbackground.png");
-    background-size: scaleclamp(0.8);
+    background-size: scaleclamp(0.26);
+    background-repeat: repeat;
     border-radius: 0;
     color: #e0e0e0;
 }
 
+.blockButton:disabled {
+    border: none !important;
+    text-shadow: none;
+    color: #a0a0a0;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/buttonbackground.png") !important;
+}
+
 .blockButton:hover {
-    color: #ffffa0;
+    color: #ffffa0; // 117 117 117   134 144 195   17 27 78
     text-shadow: 0.1em 0.1em #3f3f28;
-    background-image: url("/buttonbackgroundlid.png") !important;
+    background-image: 
+        linear-gradient(rgba(135, 155, 255, 0.305), rgba(134, 155, 255, 0.305)),
+        url("/buttonbackground.png") !important;
 }
