@@ -40,7 +40,7 @@ export default function Posts() {
             <footer>
                 <nav id="options">
                     <NavLink to=""><BlockButton> Zobacz wpis </BlockButton></NavLink>
-                    <NavLink to="/"><BlockButton> Dodaj wpis </BlockButton></NavLink>
+                    <NavLink to="/newpost"><BlockButton> Dodaj wpis </BlockButton></NavLink>
                     <NavLink to="/"><BlockButton> Wróc </BlockButton></NavLink>
                 </nav>
             </footer>

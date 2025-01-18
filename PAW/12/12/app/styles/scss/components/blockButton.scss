@@ -1,0 +1,22 @@
+.blockButton {
+    width: 100%;
+    height: scaleclamp(2.6);
+    font-family: "Minecraft";
+    font-size: 1em;
+    text-shadow: 0.1em 0.1em #383838;
+    box-shadow: 0 0 0 scaleclamp(40) rgba(0, 0, 0, 1);
+    border-bottom: scaleclamp(20) solid rgba(0, 0, 0, 0.25);
+    border-right: scaleclamp(40) solid rgba(0, 0, 0, 0.25);
+    border-left: scaleclamp(40) solid rgba(255, 255, 255, 0.5);
+    border-top: scaleclamp(40) solid rgba(255, 255, 255, 0.5);
+    background-image: url("/buttonbackground.png");
+    background-size: scaleclamp(0.8);
+    border-radius: 0;
+    color: #e0e0e0;
+}
+
+.blockButton:hover {
+    color: #ffffa0;
+    text-shadow: 0.1em 0.1em #3f3f28;
+    background-image: url("/buttonbackgroundlid.png") !important;
+}

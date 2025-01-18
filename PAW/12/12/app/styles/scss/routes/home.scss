@@ -1,0 +1,82 @@
+@import "../general/colorsShadows.scss";
+
+$font: 4.6;
+$min: 40px; $val: 12vw; $max: 170px;
+
+@function scaleclamp($n) { @return clamp($min/$n, $val/$n, $max/$n) }
+
+#home {
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    color: white;
+
+    #routeIndicator {
+        margin-left: 0.2em;
+        text-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.25);
+        @include darkGray;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+
+        div { 
+            position: relative;
+            aspect-ratio: 190 / 33; 
+            height: scaleclamp(1);
+            margin-top: scaleclamp(3);
+
+            #logoImage { height: 100% }
+        }
+
+        div::after {
+            color: #ffff00;
+            content: var(--logo-message);
+            position: absolute;
+            display: block;
+            width: 100%;
+            text-shadow: 0.1em 0.1em #3f3f00;
+            text-align: center;
+            font-size: scaleclamp(3);
+            animation: messageResize 0.5s infinite;
+            transform-origin: center;
+            right: 0;
+            bottom: 0;
+        }
+        
+        $transform-default: translateX(scaleclamp(0.5)) translateY(scaleclamp(-10)) rotate(-18deg);
+
+        @keyframes messageResize {
+            from { transform: $transform-default scale(1) }
+            50% { transform: $transform-default scale(1.05) }
+            to { transform: $transform-default scale(1) }
+        }
+    }
+    
+    nav {
+        margin-top: scaleclamp(1.2);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            gap: scaleclamp(8);
+            width: scaleclamp(0.23); 
+
+            #bonus {
+                margin-top: scaleclamp(4);
+                display: flex;
+                flex-direction: row;
+                gap: scaleclamp(7);
+            }
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-shadow: scaleclamp($font*10) scaleclamp($font*10) #3f3f3f;
+    }
+}

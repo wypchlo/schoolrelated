@@ -1,0 +1,9 @@
+@mixin whiteShadow {
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em #3f3f3f;
+}
+
+@mixin darkGray {
+    color: #505050;
+    text-shadow: 0.1em 0.1em #141414;
+}
