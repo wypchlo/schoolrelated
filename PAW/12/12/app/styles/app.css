@@ -250,15 +250,16 @@
 
 .blockButton:disabled {
   border: none !important;
-  text-shadow: none;
-  color: #a0a0a0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/buttonbackground.png") !important;
+  text-shadow: none !important;
+  color: #a0a0a0 !important;
+  cursor: not-allowed;
+  background-image: url("/buttonbackground_disabled.png") !important;
 }
 
 .blockButton:hover {
   color: #ffffa0;
   text-shadow: 0.1em 0.1em #3f3f28;
-  background-image: linear-gradient(rgba(135, 155, 255, 0.305), rgba(134, 155, 255, 0.305)), url("/buttonbackground.png") !important;
+  background-image: url("/buttonbackground_hovered.png");
 }
 
 :root {
