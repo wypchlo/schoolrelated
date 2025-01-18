@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function BlockButton({onClick, children}: any) {
+export default function BlockButton({onClick, children, type = "button"}: any) {
     const playClickSound = () => {
         let clickAudio = new Audio("/click.ogg");
         clickAudio.play();
@@ -14,7 +14,7 @@ export default function BlockButton({onClick, children}: any) {
     }
 
     return (
-        <button onClick={handleClick} className="blockButton">
+        <button onClick={handleClick} className="blockButton" type={type}>
             { children } 
         </button>
     ) 

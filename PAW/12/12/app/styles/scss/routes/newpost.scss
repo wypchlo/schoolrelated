@@ -1,0 +1,52 @@
+#newpost {
+    header {
+        width: 100%;
+        text-align: center;
+        padding: scaleclamp(4) 0;
+        @include whiteShadow;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: scaleclamp(5);
+            width: scaleclamp(0.24);
+
+            label {
+                @include lightGrayShadow;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: scaleclamp(30);
+
+                input {
+                    background: black;
+                    width: 100%;
+                    border: scaleclamp(50) solid #a0a0a0;
+                    font-size: scaleclamp($font);
+                    box-sizing: border-box !important;
+                    padding: scaleclamp(14) scaleclamp(16);
+                    font-family: "Minecraft";
+                    @include whiteShadow;
+                }
+                
+                input:focus {
+                    outline: none;
+                }
+            }
+
+            nav {
+                padding-top: scaleclamp(4);
+                width: scaleclamp(0.25);
+                display: flex;
+                flex-direction: column;
+                gap: scaleclamp(10);
+            }
+        }
+    }
+}

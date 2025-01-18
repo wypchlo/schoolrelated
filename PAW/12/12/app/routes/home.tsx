@@ -44,7 +44,6 @@ export default function Home() {
     
     useEffect(() => {
         audio.current = new Audio("/calm1.ogg");
-        audio.current.currentTime += 10;
     });
 
     return (

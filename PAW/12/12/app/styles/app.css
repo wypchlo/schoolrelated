@@ -71,51 +71,52 @@
   text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
 }
 
-.blockButton {
+#newpost header {
   width: 100%;
-  height: clamp(15.3846153846px, 4.6153846154vw, 65.3846153846px);
-  font-family: "Minecraft";
-  font-size: 1em;
-  text-shadow: 0.1em 0.1em #383838;
-  box-shadow: 0 0 0 clamp(1px, 0.3vw, 4.25px) rgb(0, 0, 0);
-  border-bottom: clamp(2px, 0.6vw, 8.5px) solid rgba(0, 0, 0, 0.25);
-  border-right: clamp(1px, 0.3vw, 4.25px) solid rgba(0, 0, 0, 0.25);
-  border-left: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
-  border-top: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
-  background-image: url("/buttonbackground.png");
-  background-size: clamp(50px, 15vw, 212.5px);
-  border-radius: 0;
-  color: #e0e0e0;
+  text-align: center;
+  padding: clamp(10px, 3vw, 42.5px) 0;
+  color: #ffffff;
+  text-shadow: 0.1em 0.1em #3f3f3f;
 }
-
-.blockButton:hover {
-  color: #ffffa0;
-  text-shadow: 0.1em 0.1em #3f3f28;
-  background-image: url("/buttonbackgroundlid.png") !important;
+#newpost section {
+  display: flex;
+  justify-content: center;
 }
-
-:root {
-  --logo-message: "Anonimowe forum!";
-  font-size: 36px;
+#newpost section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(8px, 2.4vw, 34px);
+  width: clamp(166.6666666667px, 50vw, 708.3333333333px);
 }
-
-@font-face {
-  font-family: "Minecraft";
-  src: url("/MinecraftFont.otf");
+#newpost section form label {
+  color: #a0a0a0;
+  text-shadow: 0.1em 0.1em #282828;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.3333333333px, 0.4vw, 5.6666666667px);
 }
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  background-image: url("/background.jpg");
-  background-size: 100px;
-  image-rendering: pixelated;
+#newpost section form label input {
+  background: black;
+  width: 100%;
+  border: clamp(0.8px, 0.24vw, 3.4px) solid #a0a0a0;
   font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
-  color: white;
+  box-sizing: border-box !important;
+  padding: clamp(2.8571428571px, 0.8571428571vw, 12.1428571429px) clamp(2.5px, 0.75vw, 10.625px);
   font-family: "Minecraft";
+  color: #ffffff;
+  text-shadow: 0.1em 0.1em #3f3f3f;
+}
+#newpost section form label input:focus {
+  outline: none;
+}
+#newpost section form nav {
+  padding-top: clamp(10px, 3vw, 42.5px);
+  width: clamp(160px, 48vw, 680px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 1.2vw, 17px);
 }
 
 #posts {
@@ -227,6 +228,52 @@ body {
 }
 #posts footer #options a {
   width: 45%;
+}
+
+.blockButton {
+  width: 100%;
+  height: clamp(15.3846153846px, 4.6153846154vw, 65.3846153846px);
+  font-family: "Minecraft";
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  text-shadow: 0.1em 0.1em #383838;
+  box-shadow: 0 0 0 clamp(1px, 0.3vw, 4.25px) rgb(0, 0, 0);
+  border-bottom: clamp(2px, 0.6vw, 8.5px) solid rgba(0, 0, 0, 0.25);
+  border-right: clamp(1px, 0.3vw, 4.25px) solid rgba(0, 0, 0, 0.25);
+  border-left: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
+  border-top: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
+  background-image: url("/buttonbackground.png");
+  background-size: clamp(50px, 15vw, 212.5px);
+  border-radius: 0;
+  color: #e0e0e0;
+}
+
+.blockButton:hover {
+  color: #ffffa0;
+  text-shadow: 0.1em 0.1em #3f3f28;
+  background-image: url("/buttonbackgroundlid.png") !important;
+}
+
+:root {
+  --logo-message: "Anonimowe forum!";
+  font-size: 36px;
+}
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("/MinecraftFont.otf");
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("/background.jpg");
+  background-size: 100px;
+  image-rendering: pixelated;
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  color: white;
+  font-family: "Minecraft";
 }
 
 /*# sourceMappingURL=app.css.map */

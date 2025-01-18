@@ -2,7 +2,7 @@
     width: 100%;
     height: scaleclamp(2.6);
     font-family: "Minecraft";
-    font-size: 1em;
+    font-size: scaleclamp($font);
     text-shadow: 0.1em 0.1em #383838;
     box-shadow: 0 0 0 scaleclamp(40) rgba(0, 0, 0, 1);
     border-bottom: scaleclamp(20) solid rgba(0, 0, 0, 0.25);

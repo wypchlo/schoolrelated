@@ -3,7 +3,12 @@
     text-shadow: 0.1em 0.1em #3f3f3f;
 }
 
-@mixin darkGray {
+@mixin darkGrayShadow {
     color: #505050;
     text-shadow: 0.1em 0.1em #141414;
+}
+
+@mixin lightGrayShadow {
+    color: #a0a0a0;
+    text-shadow: 0.1em 0.1em #282828;
 }
