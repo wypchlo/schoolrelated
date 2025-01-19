@@ -1,11 +1,12 @@
 import BlockButton from "app/components/BlockButton"
 import React, { useRef, useState } from "react"
-import { NavLink } from "react-router"
+import { NavLink, useNavigate } from "react-router"
 
 export default function NewPost() {
     const formRef = useRef<HTMLFormElement>(null);
     const [titleError, setTitleError] = useState('');
     const [contentError, setContentError] = useState('');
+    const navigate = useNavigate();
 
     async function addPost(formData: FormData) {
         setTitleError('');
@@ -32,6 +33,8 @@ export default function NewPost() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title, description, content }) 
             });
+            if(!response.ok) throw new Error("Failed to add new post");
+            navigate("/posts");
         }
         catch(error) {
             console.error(`Error: ${error}`);

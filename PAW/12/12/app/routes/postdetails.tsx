@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router";
 import { Scrollbar } from "react-scrollbars-custom";
 
-export default function Posts() {
+export default function PostDetails() {
     const [title, setTitle] = useState<String>('');
     const [description, setDescription] = useState<String>('');
     const [content, setContent] = useState<String>('');

@@ -57,7 +57,7 @@ export default function Home() {
             <nav>
                 <div id="container">
                     <NavLink to="/posts"><BlockButton> Wpisy </BlockButton></NavLink>
-                    <BlockButton> Kategorie </BlockButton>
+                    <NavLink to="/categories"><BlockButton> Kategorie </BlockButton></NavLink>
                     <div id="bonus">
                         <BlockButton onClick={scramble}> Zepsuj </BlockButton>
                         <BlockButton onClick={toggleMusic}> Muzyka </BlockButton>

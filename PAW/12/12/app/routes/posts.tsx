@@ -6,22 +6,38 @@ import { Scrollbar } from "react-scrollbars-custom";
 export default function Posts() {
     const [posts, setPosts] = useState<Array<any>>();
     const [selected, setSelected] = useState<Number | null>(null);
+    
+    async function fetchPosts() {
+        try {
+            const response = await fetch("http://localhost:3000/wpis");
+            if(!response.ok) throw new Error("Failed to fetch posts");
+
+            const data = await response.json();
+            setPosts(data);
+        }
+        catch(error) {
+            console.error(`Error: ${error}`);
+        }
+    }
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            try {
-                const response = await fetch("http://localhost:3000/wpis");
-                if(!response.ok) throw new Error("Failed to fetch posts");
-
-                const data = await response.json();
-                setPosts(data);
-            }
-            catch(error) {
-                console.error(`Error: ${error}`);
-            }
-        }
         if(!posts) fetchPosts();
     }, []);
+    
+    async function deletePost() {
+        try {
+            const response = await fetch(`http://localhost:3000/wpis/${selected}`, {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' }
+            });
+            if(!response.ok) throw new Error("Failed to delete post");
+            setSelected(null);
+            fetchPosts();
+        }
+        catch(error) {
+            console.error(`Error: ${error}`);
+        }
+    }
 
     function Posts() {
         if(!posts) return null;
@@ -56,6 +72,7 @@ export default function Posts() {
                 <nav id="options">
                     <NavLink to={`/postdetails/${selected}`}><BlockButton disabled={selected ? false : true}> Zobacz wpis </BlockButton></NavLink>
                     <NavLink to="/newpost"><BlockButton> Dodaj wpis </BlockButton></NavLink>
+                    <a><BlockButton disabled={selected ? false : true} onClick={deletePost}> Usuń wpis </BlockButton></a>
                     <NavLink to="/"><BlockButton> Wróć </BlockButton></NavLink>
                 </nav>
             </footer>
