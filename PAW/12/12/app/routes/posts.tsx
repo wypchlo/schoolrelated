@@ -1,12 +1,18 @@
 import BlockButton from "app/components/BlockButton";
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { Scrollbar } from "react-scrollbars-custom";
 
 export default function Posts() {
     const [posts, setPosts] = useState<Array<any>>();
-    const [selected, setSelected] = useState<Number | null>(null);
+    const [selected, setSelected] = useState<Number | null>(null); 
+    const navigate = useNavigate();
     
+    function handleClick(postId: Number) {
+        if(selected == postId) navigate(`/postdetails/${postId}`);
+        setSelected(postId);
+    }
+
     async function fetchPosts() {
         try {
             const response = await fetch("http://localhost:3000/wpis");
@@ -46,7 +52,7 @@ export default function Posts() {
             <button 
                 className={`post ${selected ? selected.valueOf() == post.id ? 'selected' : '' : ''}`} 
                 key={post.id} 
-                onClick={() => setSelected(post.id)}
+                onClick={() => handleClick(post.id)}
             >
                 <div id="title"> {post.title} </div>
                 <div id="description"> {post.description} </div>

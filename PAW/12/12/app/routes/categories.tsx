@@ -6,7 +6,7 @@ import { Scrollbar } from "react-scrollbars-custom";
 export default function Categories() {
     const [categories, setCategories] = useState<Array<any>>();
     const [selected, setSelected] = useState<Number | null>(null);
-    
+
     async function fetchCategories() {
         try {
             const response = await fetch("http://localhost:3000/kategoria");

@@ -266,7 +266,7 @@
   color: white;
   width: 100%;
   margin-top: clamp(13.3333333333px, 4vw, 56.6666666667px);
-  margin-bottom: clamp(6.6666666667px, 2vw, 28.3333333333px);
+  margin-bottom: clamp(2.6666666667px, 0.8vw, 11.3333333333px);
   text-align: center;
   text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
 }
