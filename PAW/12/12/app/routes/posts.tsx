@@ -1,6 +1,5 @@
 import BlockButton from "app/components/BlockButton";
 import React, { useEffect, useState } from "react";
-import FC from "react-dom"
 import { NavLink } from "react-router";
 import { Scrollbar } from "react-scrollbars-custom";
 
@@ -55,7 +54,7 @@ export default function Posts() {
 
             <footer>
                 <nav id="options">
-                    <NavLink to=""><BlockButton disabled={selected ? false : true}> Zobacz wpis </BlockButton></NavLink>
+                    <NavLink to={`/postdetails/${selected}`}><BlockButton disabled={selected ? false : true}> Zobacz wpis </BlockButton></NavLink>
                     <NavLink to="/newpost"><BlockButton> Dodaj wpis </BlockButton></NavLink>
                     <NavLink to="/"><BlockButton> Wróć </BlockButton></NavLink>
                 </nav>

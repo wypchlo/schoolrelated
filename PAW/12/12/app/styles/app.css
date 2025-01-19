@@ -253,6 +253,101 @@
   width: 45%;
 }
 
+#postdetails {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#postdetails header {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2px, 0.6vw, 8.5px);
+  color: white;
+  width: 100%;
+  margin-top: clamp(13.3333333333px, 4vw, 56.6666666667px);
+  margin-bottom: clamp(6.6666666667px, 2vw, 28.3333333333px);
+  text-align: center;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+#postdetails header #title {
+  text-shadow: 0.1em 0.1em #3f3f3f;
+}
+#postdetails header #description {
+  color: #808080;
+  text-shadow: 0.1em 0.1em #202020;
+}
+#postdetails section::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0px 20px 10px -10px black, inset 0px -20px 10px -10px black;
+}
+#postdetails section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+#postdetails section #postContainer {
+  position: relative;
+  height: 100%;
+  width: clamp(0px, 100vw, 1000px);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+#postdetails section #postContainer ::-webkit-scrollbar {
+  display: none;
+}
+#postdetails section #postContainer #padding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: clamp(2.8571428571px, 0.8571428571vw, 12.1428571429px);
+  word-break: break-all;
+}
+#postdetails section #scrollbar .ScrollbarsCustom-TrackY {
+  background-color: black !important;
+  border-radius: 0 !important;
+  width: clamp(5px, 1.5vw, 21.25px) !important;
+  height: 100% !important;
+  top: 0 !important;
+  z-index: 2;
+}
+#postdetails section #scrollbar .ScrollbarsCustom-ThumbY {
+  background-color: #c0c0c0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  border-right: clamp(1px, 0.3vw, 4.25px) solid #808080 !important;
+  border-bottom: clamp(0.7142857143px, 0.2142857143vw, 3.0357142857px) solid #808080 !important;
+}
+#postdetails footer {
+  padding: clamp(8px, 2.4vw, 34px);
+  display: flex;
+  justify-content: center;
+}
+#postdetails footer #options {
+  width: clamp(200px, 80vw, 1200px);
+  display: flex;
+  margin-top: clamp(5px, 1.5vw, 21.25px);
+  justify-content: center;
+  gap: clamp(8px, 2.4vw, 34px);
+  flex-wrap: wrap;
+}
+#postdetails footer #options a {
+  width: 45%;
+}
+
 .blockButton {
   width: 100%;
   height: clamp(15.3846153846px, 4.6153846154vw, 65.3846153846px);
