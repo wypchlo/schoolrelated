@@ -57,7 +57,7 @@ export default function Posts() {
                 <nav id="options">
                     <NavLink to=""><BlockButton disabled={selected ? false : true}> Zobacz wpis </BlockButton></NavLink>
                     <NavLink to="/newpost"><BlockButton> Dodaj wpis </BlockButton></NavLink>
-                    <NavLink to="/"><BlockButton> Wróc </BlockButton></NavLink>
+                    <NavLink to="/"><BlockButton> Wróć </BlockButton></NavLink>
                 </nav>
             </footer>
         </main>

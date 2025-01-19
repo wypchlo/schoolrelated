@@ -65,7 +65,7 @@ export default function Home() {
                 </div>
             </nav>
             
-            <footer> Copyright Milosz Wypchlo. Do not distribute. </footer>
+            <footer> Copyright Miłosz Wypchło. Do not distribute. </footer>
         </main>
     );
 }

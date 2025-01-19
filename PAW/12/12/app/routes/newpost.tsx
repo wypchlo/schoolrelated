@@ -8,17 +8,21 @@ export default function NewPost() {
     const [contentError, setContentError] = useState('');
 
     async function addPost(formData: FormData) {
+        setTitleError('');
+        setContentError('');
         const nTitle = formData.get("title");
         const nContent = formData.get("content");
         
-        if(!nTitle) return setTitleError("Tytuł wpisu jest wymagany");
-        if(!nContent) return setContentError("Treść wpisu jest wymagana");
+        if(!nTitle) setTitleError("Tytuł wpisu jest wymagany");
+        if(!nContent) setContentError("Treść wpisu jest wymagana");
+        if(titleError.length != 0 || contentError.length != 0) return;
 
-        const title: String = nTitle.toString();
-        const content: String = nContent.toString();
+        const title: String = nTitle!.toString();
+        const content: String = nContent!.toString();
     
-        if(title.length == 0) return setTitleError("Tytuł wpisu jest wymagany");
-        if(content.length == 0) return setContentError("Treść wpisu jest wymagana");
+        if(title.length == 0) setTitleError("Tytuł wpisu jest wymagany");
+        if(content.length == 0) setContentError("Treść wpisu jest wymagana");
+        if(titleError.length != 0 || contentError.length != 0) return;
 
         const description = formData.get("description");
 
@@ -40,12 +44,12 @@ export default function NewPost() {
                 
             <section>
                 <form ref={formRef} action={addPost}>
-                    <label> Tytul <input name="title" type="text"/> {titleError} </label>
+                    <label> Tytuł <input name="title" type="text"/> <div id="error"> {titleError} </div> </label>
                     <label> Opis <input name="description" type="text"/> </label>
-                    <label> Tresc <input name="content" type="text"/> {contentError}</label>
+                    <label> Treść <textarea name="content"/> <span/> <div id="error"> {contentError} </div> </label>
                     <nav>
                         <BlockButton type="submit"> Dodaj nowy wpis </BlockButton>
-                        <NavLink to="/posts"> <BlockButton> Wróc </BlockButton> </NavLink>
+                        <NavLink to="/posts"> <BlockButton> Wróć </BlockButton> </NavLink>
                     </nav>
                 </form>
             </section>

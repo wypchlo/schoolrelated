@@ -96,8 +96,9 @@
   display: flex;
   flex-direction: column;
   gap: clamp(1.3333333333px, 0.4vw, 5.6666666667px);
+  position: relative;
 }
-#newpost section form label input {
+#newpost section form label input, #newpost section form label textarea {
   background: black;
   width: 100%;
   border: clamp(0.8px, 0.24vw, 3.4px) solid #a0a0a0;
@@ -108,8 +109,30 @@
   color: #ffffff;
   text-shadow: 0.1em 0.1em #3f3f3f;
 }
-#newpost section form label input:focus {
+#newpost section form label textarea {
+  resize: vertical;
+  position: relative;
+}
+#newpost section form label span {
+  position: relative;
+}
+#newpost section form label span::before {
+  position: absolute;
+  content: "";
+  display: block;
+  right: clamp(1.6px, 0.48vw, 6.8px);
+  pointer-events: none;
+  top: calc(0px - clamp(4.7619047619px, 1.4285714286vw, 20.2380952381px));
+  background-color: #a0a0a0;
+  width: clamp(1.3333333333px, 0.4vw, 5.6666666667px);
+  height: clamp(1.3333333333px, 0.4vw, 5.6666666667px);
+}
+#newpost section form label input:focus, #newpost section form label textarea:focus {
   outline: none;
+}
+#newpost section form label #error {
+  color: #ff5555;
+  text-shadow: 0.1em 0.1em #3f1515;
 }
 #newpost section form nav {
   padding-top: clamp(10px, 3vw, 42.5px);
@@ -179,7 +202,7 @@
   font-family: "Minecraft";
   height: clamp(33.3333333333px, 10vw, 141.6666666667px);
   font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
-  padding: clamp(1px, 0.3vw, 4.25px);
+  padding: clamp(2px, 0.6vw, 8.5px) clamp(1px, 0.3vw, 4.25px);
   display: flex;
   flex-direction: column;
 }
@@ -194,7 +217,7 @@
   text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #202020;
 }
 #posts section #postContainer #padding .post.selected {
-  padding: 0;
+  padding: clamp(1px, 0.3vw, 4.25px) 0;
   border: clamp(1px, 0.3vw, 4.25px) solid #808080;
   background-color: black;
 }
@@ -269,7 +292,7 @@
 
 @font-face {
   font-family: "Minecraft";
-  src: url("/MinecraftFont.otf");
+  src: url("/MinecraftSeven.ttf");
 }
 html, body {
   height: 100%;
