@@ -9,23 +9,21 @@ export default function NewPost() {
     const navigate = useNavigate();
 
     async function addPost(formData: FormData) {
-        setTitleError('');
         setContentError('');
-        const nTitle = formData.get("title");
-        const nContent = formData.get("content");
+        setTitleError('');
+        let errors = { title: '', content: '' }
         
-        if(!nTitle) setTitleError("Tytuł wpisu jest wymagany");
-        if(!nContent) setContentError("Treść wpisu jest wymagana");
-        if(titleError.length != 0 || contentError.length != 0) return;
-
-        const title: String = nTitle!.toString();
-        const content: String = nContent!.toString();
-    
-        if(title.length == 0) setTitleError("Tytuł wpisu jest wymagany");
-        if(content.length == 0) setContentError("Treść wpisu jest wymagana");
-        if(titleError.length != 0 || contentError.length != 0) return;
-
-        const description = formData.get("description");
+        const title: string | null = formData.get("title") ? formData.get('title')!.toString() : null;
+        const content: string | null = formData.get("content") ? formData.get('content')!.toString() : null;
+        const description: string | null = formData.get("description") ? formData.get('description')!.toString() : null;
+        
+        if(!title) errors.title = "Tytuł wpisu jest wymagany";
+        if(!content) errors.content = "Treść wpisu jest wymagana"; 
+        if(errors.title || errors.content) { 
+            setContentError(errors.title);
+            setTitleError(errors.content)
+            return;
+        }
 
         try {
             const response = await fetch('http://localhost:3000/wpis', {
