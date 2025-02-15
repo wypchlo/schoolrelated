@@ -1,0 +1,421 @@
+@keyframes loadingDots {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
+.loadingAnim {
+  all: unset;
+}
+
+.loadingAnim::after {
+  animation: loadingDots 4s linear infinite running;
+  content: "";
+}
+
+#home {
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  color: white;
+}
+#home #routeIndicator {
+  margin-left: 0.2em;
+  text-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.25);
+  color: #505050;
+  text-shadow: 0.1em 0.1em #141414;
+}
+#home header {
+  display: flex;
+  justify-content: center;
+}
+#home header div {
+  position: relative;
+  aspect-ratio: 190/33;
+  height: clamp(40px, 12vw, 170px);
+  margin-top: clamp(13.3333333333px, 4vw, 56.6666666667px);
+}
+#home header div #logoImage {
+  height: 100%;
+}
+#home header div::after {
+  color: #ffff00;
+  content: var(--logo-message);
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-shadow: 0.1em 0.1em #3f3f00;
+  text-align: center;
+  font-size: clamp(13.3333333333px, 4vw, 56.6666666667px);
+  animation: messageResize 0.5s infinite;
+  transform-origin: center;
+  right: 0;
+  bottom: 0;
+}
+@keyframes messageResize {
+  from {
+    transform: translateX(clamp(80px, 24vw, 340px)) translateY(clamp(-4px, -1.2vw, -17px)) rotate(-18deg) scale(1);
+  }
+  50% {
+    transform: translateX(clamp(80px, 24vw, 340px)) translateY(clamp(-4px, -1.2vw, -17px)) rotate(-18deg) scale(1.05);
+  }
+  to {
+    transform: translateX(clamp(80px, 24vw, 340px)) translateY(clamp(-4px, -1.2vw, -17px)) rotate(-18deg) scale(1);
+  }
+}
+#home nav {
+  margin-top: clamp(33.3333333333px, 10vw, 141.6666666667px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#home nav #container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, 1.5vw, 21.25px);
+  width: clamp(173.9130434783px, 52.1739130435vw, 739.1304347826px);
+}
+#home nav #container #bonus {
+  margin-top: clamp(10px, 3vw, 42.5px);
+  display: flex;
+  flex-direction: row;
+  gap: clamp(5.7142857143px, 1.7142857143vw, 24.2857142857px);
+}
+#home footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+
+#posts {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#posts header {
+  color: white;
+  width: 100%;
+  margin-top: clamp(13.3333333333px, 4vw, 56.6666666667px);
+  margin-bottom: clamp(2.6666666667px, 0.8vw, 11.3333333333px);
+  text-align: center;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+#posts section::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0px 20px 10px -10px black, inset 0px -20px 10px -10px black;
+}
+#posts section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+#posts section #postContainer {
+  position: relative;
+  height: 100%;
+  width: clamp(0px, 100vw, 1000px);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+#posts section #postContainer ::-webkit-scrollbar {
+  display: none;
+}
+#posts section #postContainer #padding {
+  padding: clamp(2.8571428571px, 0.8571428571vw, 12.1428571429px);
+}
+#posts section #postContainer #padding #progress {
+  text-align: center !important;
+}
+#posts section #postContainer #padding .post {
+  background: none;
+  box-sizing: border-box;
+  border: none;
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  text-align: left;
+  font-family: "Minecraft";
+  height: clamp(33.3333333333px, 10vw, 141.6666666667px);
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  padding: clamp(2px, 0.6vw, 8.5px) clamp(1px, 0.3vw, 4.25px);
+  display: flex;
+  flex-direction: column;
+}
+#posts section #postContainer #padding .post #title, #posts section #postContainer #padding .post #description {
+  margin: 0 clamp(2.6666666667px, 0.8vw, 11.3333333333px);
+}
+#posts section #postContainer #padding .post #title {
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+#posts section #postContainer #padding .post #description {
+  color: #808080;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #202020;
+}
+#posts section #postContainer #padding .post.selected {
+  padding: clamp(1px, 0.3vw, 4.25px) 0;
+  border: clamp(1px, 0.3vw, 4.25px) solid #808080;
+  background-color: black;
+}
+#posts section #scrollbar .ScrollbarsCustom-TrackY {
+  background-color: black !important;
+  border-radius: 0 !important;
+  width: clamp(5px, 1.5vw, 21.25px) !important;
+  height: 100% !important;
+  top: 0 !important;
+  z-index: 2;
+}
+#posts section #scrollbar .ScrollbarsCustom-ThumbY {
+  background-color: #c0c0c0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  border-right: clamp(1px, 0.3vw, 4.25px) solid #808080 !important;
+  border-bottom: clamp(0.7142857143px, 0.2142857143vw, 3.0357142857px) solid #808080 !important;
+}
+#posts footer {
+  padding: clamp(8px, 2.4vw, 34px);
+  display: flex;
+  justify-content: center;
+}
+#posts footer #options {
+  width: clamp(200px, 80vw, 1200px);
+  display: flex;
+  margin-top: clamp(5px, 1.5vw, 21.25px);
+  justify-content: center;
+  gap: clamp(8px, 2.4vw, 34px);
+  flex-wrap: wrap;
+}
+#posts footer #options a {
+  width: 45%;
+}
+
+#postdetails {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#postdetails header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2px, 0.6vw, 8.5px);
+  color: white;
+  width: 100%;
+  margin-top: clamp(13.3333333333px, 4vw, 56.6666666667px);
+  margin-bottom: clamp(6.6666666667px, 2vw, 28.3333333333px);
+  text-align: center;
+  text-shadow: clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) clamp(0.8695652174px, 0.2608695652vw, 3.6956521739px) #3f3f3f;
+}
+#postdetails header #stevContainer {
+  position: absolute;
+  right: clamp(4px, 1.2vw, 17px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#postdetails header #stevContainer #userInfo {
+  display: none;
+}
+#postdetails header #stevContainer:hover #userInfo {
+  display: block !important;
+  position: absolute;
+  right: 0;
+  top: clamp(11.1111111111px, 3.3333333333vw, 47.2222222222px);
+  background-color: black;
+  z-index: 2;
+}
+#postdetails header #stevContainer:hover #userInfo #name {
+  color: #a0a0a0;
+  text-shadow: 0.1em 0.1em #282828;
+}
+#postdetails header img {
+  aspect-ratio: 1/1;
+  width: clamp(13.3333333333px, 4vw, 56.6666666667px);
+}
+#postdetails header #title {
+  box-sizing: border-box;
+  padding: 0 clamp(20px, 6vw, 85px) !important;
+  width: 100%;
+  text-shadow: 0.1em 0.1em #3f3f3f;
+}
+#postdetails header #description {
+  color: #808080;
+  text-shadow: 0.1em 0.1em #202020;
+}
+#postdetails section::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0px 20px 10px -10px black, inset 0px -20px 10px -10px black;
+}
+#postdetails section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+#postdetails section #postContainer {
+  position: relative;
+  height: 100%;
+  width: clamp(0px, 100vw, 1000px);
+  overflow: scroll;
+  scrollbar-width: none;
+}
+#postdetails section #postContainer ::-webkit-scrollbar {
+  display: none;
+}
+#postdetails section #postContainer #padding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: clamp(2.8571428571px, 0.8571428571vw, 12.1428571429px);
+  word-break: break-all;
+}
+#postdetails section #scrollbar .ScrollbarsCustom-TrackY {
+  background-color: black !important;
+  border-radius: 0 !important;
+  width: clamp(5px, 1.5vw, 21.25px) !important;
+  height: 100% !important;
+  top: 0 !important;
+  z-index: 2;
+}
+#postdetails section #scrollbar .ScrollbarsCustom-ThumbY {
+  background-color: #c0c0c0 !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  border-right: clamp(1px, 0.3vw, 4.25px) solid #808080 !important;
+  border-bottom: clamp(0.7142857143px, 0.2142857143vw, 3.0357142857px) solid #808080 !important;
+}
+#postdetails footer {
+  padding: clamp(8px, 2.4vw, 34px);
+  display: flex;
+  justify-content: center;
+}
+#postdetails footer #options {
+  width: clamp(200px, 80vw, 1200px);
+  display: flex;
+  margin-top: clamp(5px, 1.5vw, 21.25px);
+  justify-content: center;
+  gap: clamp(8px, 2.4vw, 34px);
+  flex-wrap: wrap;
+}
+#postdetails footer #options a {
+  width: 45%;
+}
+
+.blockButton {
+  width: 100%;
+  height: clamp(15.3846153846px, 4.6153846154vw, 65.3846153846px);
+  font-family: "Minecraft";
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  text-shadow: 0.1em 0.1em #383838;
+  box-shadow: 0 0 0 clamp(1px, 0.3vw, 4.25px) rgb(0, 0, 0);
+  border-bottom: clamp(2px, 0.6vw, 8.5px) solid rgba(0, 0, 0, 0.25);
+  border-right: clamp(1px, 0.3vw, 4.25px) solid rgba(0, 0, 0, 0.25);
+  border-left: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
+  border-top: clamp(1px, 0.3vw, 4.25px) solid rgba(255, 255, 255, 0.5);
+  background-image: url("/buttonbackground.png");
+  background-size: clamp(153.8461538462px, 46.1538461538vw, 653.8461538462px);
+  background-repeat: repeat;
+  border-radius: 0;
+  color: #e0e0e0;
+}
+
+.blockButton:disabled {
+  border: none !important;
+  text-shadow: none !important;
+  color: #a0a0a0 !important;
+  cursor: not-allowed;
+  background-image: url("/buttonbackground_disabled.png") !important;
+}
+
+.blockButton:hover {
+  color: #ffffa0;
+  text-shadow: 0.1em 0.1em #3f3f28;
+  background-image: url("/buttonbackground_hovered.png");
+}
+
+@keyframes loadingDots {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
+.loadingAnim {
+  all: unset;
+}
+
+.loadingAnim::after {
+  animation: loadingDots 4s linear infinite running;
+  content: "";
+}
+
+:root {
+  --logo-message: "Lepsze w 12/12!";
+  font-size: 36px;
+}
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("/MinecraftSeven.ttf");
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("/background.jpg");
+  background-size: 100px;
+  image-rendering: pixelated;
+  font-size: clamp(8.6956521739px, 2.6086956522vw, 36.9565217391px);
+  color: white;
+  font-family: "Minecraft";
+}
+
+/*# sourceMappingURL=app.css.map */

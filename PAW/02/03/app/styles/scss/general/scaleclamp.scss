@@ -1,0 +1,4 @@
+$font: 4.6;
+$min: 40px; $val: 12vw; $max: 170px;
+
+@function scaleclamp($n) { @return clamp($min/$n, $val/$n, $max/$n) }
