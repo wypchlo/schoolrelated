@@ -7,11 +7,16 @@ const router = express.Router();
 // CREATE ///////////////////////////////////////////////////////////////////////////
 
 router.post('/', async(req: Request, res: Response): Promise<any> => {
-    const { content } = req.body;
-    if( !content ) return res.status(400).json({ message: "Missing required field content" });
+    let missing = new Array();
+
+    const { content, postId } = req.body;
+    if( !postId ) missing.push('postId');
+    if( !content ) missing.push('content');
+
+    if(missing.length != 0) return res.status(400).json({ messages: "Required fields missing: " + missing.join(' ') })
     
     try {
-        await prisma.comment.create({ data: { content }});
+        await prisma.comment.create({ data: { content, postId }});
         res.status(200).json({ message: "Successfully added a new comment" });
     } 
     catch(err) {
