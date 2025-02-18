@@ -16,7 +16,7 @@ router.post('/', async(req: Request, res: Response): Promise<any> => {
     if(missing.length != 0) return res.status(400).json({ messages: "Required fields missing: " + missing.join(' ') })
     
     try {
-        await prisma.comment.create({ data: { content, postId }});
+        await prisma.comment.create({ data: { content, postId: Number.parseInt(postId) }});
         res.status(200).json({ message: "Successfully added a new comment" });
     } 
     catch(err) {
@@ -37,6 +37,14 @@ router.get("/:id", async(req: Request, res: Response): Promise<any> => {
 
     const comment = await prisma.comment.findUnique({ where: { id } });
     res.status(200).json(comment);
+})
+
+router.get("/wpis/:postId", async(req: Request, res: Response): Promise<any> => {
+    const postId = parseInt(req.params.postId);
+    if( !Number.isInteger(postId) ) return res.status(400).json({ message: "The id of post must be of type Integer" });
+
+    const comments = await prisma.comment.findMany({ where: { postId } });
+    res.status(200).json(comments);
 })
 
 // UPDATE ///////////////////////////////////////////////////////////////////////////

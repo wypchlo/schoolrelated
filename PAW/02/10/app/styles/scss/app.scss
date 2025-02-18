@@ -1,0 +1,29 @@
+@import "./routes/";
+@import "./components/";
+@import "./general/";
+
+:root {
+    --logo-message: 'Anonimowe forum!';
+    font-size: 36px;
+}
+
+$font: 4.6;
+
+@font-face {
+    font-family: "Minecraft";
+    src: url("/MinecraftSeven.ttf");
+}
+
+html, body { height: 100% }
+
+body {
+    margin: 0;
+    background-image: url("/background.jpg");
+    background-size: 100px;
+    image-rendering: pixelated;
+    font-size: scaleclamp($font);
+    color: white;
+    overflow: hidden;
+
+    font-family: "Minecraft";
+}
